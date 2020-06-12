@@ -54,7 +54,7 @@ The Meme object is returned when requesting 1 or multiple memes. An example obje
 
 {% api-method method="get" host="https://api.memerator.me/v1/" path="meme/:id" %}
 {% api-method-summary %}
-Getting a Meme
+Get a Meme
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -140,7 +140,7 @@ Response of a meme that doesn't exist \(or is disabled, and you aren't the owner
 
 {% api-method method="get" host="https://api.memerator.me" path="/v1/meme/random" %}
 {% api-method-summary %}
-Getting a Random Meme
+Get a Random Meme
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -298,6 +298,202 @@ This method returns an array of comments for a specifiied meme and their author.
 
 ```
 
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="put" host="https://api.memerator.me" path="/v1/meme/:id/disable" %}
+{% api-method-summary %}
+Disable a Meme
+{% endapi-method-summary %}
+
+{% api-method-description %}
+Disables a meme by ID. Meme author only!
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name=":id" type="string" required=true %}
+Meme ID
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+If you did it right!
+{% endapi-method-response-example-description %}
+
+```
+{ "success": true }
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=400 %}
+{% api-method-response-example-description %}
+If the meme is already disabled
+{% endapi-method-response-example-description %}
+
+```
+{ "error": "this meme is already disabled" }
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=401 %}
+{% api-method-response-example-description %}
+If your key is invalid or can't access the resource
+{% endapi-method-response-example-description %}
+
+```
+{ "error": "Auth not valid" }
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=403 %}
+{% api-method-response-example-description %}
+If you don't own the meme
+{% endapi-method-response-example-description %}
+
+```
+{ "error": "you don't own this meme" }
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=404 %}
+{% api-method-response-example-description %}
+If the meme doesn't exist \(or is disabled and you aren't the owner\)
+{% endapi-method-response-example-description %}
+
+```
+{ "error": "meme does not exist" }
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="put" host="https://api.memerator.me" path="/v1/meme/:id/enable" %}
+{% api-method-summary %}
+Enable a meme
+{% endapi-method-summary %}
+
+{% api-method-description %}
+Exact same as disable, but for enabling
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name=":id" type="string" required=true %}
+The Meme ID
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+If you did it right!
+{% endapi-method-response-example-description %}
+
+```
+{ "success": true }
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=400 %}
+{% api-method-response-example-description %}
+If the meme is already enabled
+{% endapi-method-response-example-description %}
+
+```
+{ "error": "this meme is already enabled" }
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=401 %}
+{% api-method-response-example-description %}
+If the API key is invalid or can't access the resource
+{% endapi-method-response-example-description %}
+
+```
+{ "error": "Auth not valid" }
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=403 %}
+{% api-method-response-example-description %}
+If you don't own the meme
+{% endapi-method-response-example-description %}
+
+```
+{ "error": "you don't own this meme" }
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=404 %}
+{% api-method-response-example-description %}
+If the meme doesn't exist or it's disabled and you aren't the owner.
+{% endapi-method-response-example-description %}
+
+```
+{ "error": "meme does not exist" }
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+{% api-method method="get" host="https://api.memerator.me" path="/v1/meme/:id/rating" %}
+{% api-method-summary %}
+Get your Rating
+{% endapi-method-summary %}
+
+{% api-method-description %}
+Gets your rating on a meme.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name=":id" type="string" required=true %}
+the meme id
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+The rating
+{% endapi-method-response-example-description %}
+
+```
+{ "rating": 5 }
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=401 %}
+{% api-method-response-example-description %}
+If your key isn't valid or it's not allowed to access "Ratings"
+{% endapi-method-response-example-description %}
+
+```
+{ "error": 'Auth not valid' }
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=404 %}
+{% api-method-response-example-description %}
+If the meme doesn't exist or it's disabled and you aren't the owner.
+{% endapi-method-response-example-description %}
+
+```
+{ "error": 'meme does not exist' }
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
