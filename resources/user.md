@@ -24,7 +24,7 @@ This endpoint allows you to get a user's profile by ID or username.
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name=":user" type="object" required=true %}
+{% api-method-parameter name=":user" type="object" %}
 The user you want. Can be by ID or username
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
@@ -63,50 +63,9 @@ User successfully retrieved.
 Could not find a user matching this query.
 {% endapi-method-response-example-description %}
 
-```javascript
+```
 {
     "error": "this user does not exist!"
-}
-```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
-
-{% api-method method="get" host="https://api.memerator.me" path="/v1/integrations" %}
-{% api-method-summary %}
-Get Integrations
-{% endapi-method-summary %}
-
-{% api-method-description %}
-Gets your integrations. Requires "View Integrations" key permission.
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-A JSONObject consisting of a mapping of service name to an array of integrations for said service name.
-{% endapi-method-response-example-description %}
-
-```javascript
-{
-    "google": [
-        "my google email",
-        "my second google email",
-        "mcdonalds@gov.gov"
-    ],
-    "apple": [
-        "send me @bitcoin"
-    ],
-    "minecraft": [
-        "sdlhfw87e4rt43h7tu34tfelsiofyest8ye4t"
-    ],
-    "discord": [
-        "4756754676574567567"
-    ]
 }
 ```
 {% endapi-method-response-example %}

@@ -560,3 +560,151 @@ If the meme doesn't exist or it's disabled and you aren't the owner.
 {% endapi-method-spec %}
 {% endapi-method %}
 
+{% api-method method="get" host="https://api.memerator.me" path="/v1/meme/:id/ratings" %}
+{% api-method-summary %}
+Get all Ratings
+{% endapi-method-summary %}
+
+{% api-method-description %}
+Gets all ratings for a meme. Pro only! Requires "Ratings" key permission.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name=":id" type="string" required=true %}
+Meme ID.
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+A JSONArray of objects. Each Object contains a hash mapping of user to User object, rating to the rating, and the timestamp of the rating.
+{% endapi-method-response-example-description %}
+
+```javascript
+[
+    {
+        "user": {
+            "username": "treye_2019",
+            "bio": "",
+            "id": 296476360602419211,
+            "stats": {
+                "memes": 1,
+                "followers": 0,
+                "following": 0
+            },
+            "perks": {
+                "verified": false,
+                "staff": false,
+                "translator": false,
+                "pro": false
+            },
+            "permalink": "https://memerator.me/profile/296476360602419211",
+            "joined": "2019-03-02T00:43:26.000Z",
+            "joined_epoch_seconds": 1551487406
+        },
+        "rating": 1,
+        "timestamp": "2019-05-20T13:04:33.000Z"
+    },
+    {
+        "user": {
+            "username": "Chew",
+            "bio": "#1 most depressed Memerator user. pronouns: she/her 🏳️‍⚧️",
+            "id": 476488167042580481,
+            "stats": {
+                "memes": 382,
+                "followers": 28,
+                "following": 24
+            },
+            "perks": {
+                "verified": true,
+                "staff": true,
+                "translator": false,
+                "pro": true
+            },
+            "permalink": "https://memerator.me/profile/476488167042580481",
+            "joined": "2018-10-11T15:37:03.000Z",
+            "joined_epoch_seconds": 1539272223
+        },
+        "rating": 5,
+        "timestamp": "2019-05-20T13:04:33.000Z"
+    },
+    {
+        "user": {
+            "username": "Loyal_2019",
+            "bio": null,
+            "id": 181249274699448320,
+            "stats": {
+                "memes": 0,
+                "followers": 0,
+                "following": 0
+            },
+            "perks": {
+                "verified": false,
+                "staff": false,
+                "translator": false,
+                "pro": false
+            },
+            "permalink": "https://memerator.me/profile/181249274699448320",
+            "joined": "2019-03-31T21:35:12.000Z",
+            "joined_epoch_seconds": 1554068112
+        },
+        "rating": 4,
+        "timestamp": "2019-05-20T13:04:33.000Z"
+    },
+    {
+        "user": {
+            "username": "ur_mom",
+            "bio": "is gay",
+            "id": 783885855388066361,
+            "stats": {
+                "memes": 239,
+                "followers": 8,
+                "following": 4
+            },
+            "perks": {
+                "verified": true,
+                "staff": false,
+                "translator": false,
+                "pro": false
+            },
+            "permalink": "https://memerator.me/profile/783885855388066361",
+            "joined": "2019-10-24T20:37:28.000Z",
+            "joined_epoch_seconds": 1571949448
+        },
+        "rating": 5,
+        "timestamp": "2019-11-06T00:28:07.000Z"
+    },
+    {
+        "user": {
+            "username": "taketheshake",
+            "bio": "I wish I was awesome as chew, but she's almost equivalent to comp sci meme Jesus, so maybe not.",
+            "id": 338784252382412800,
+            "stats": {
+                "memes": 3,
+                "followers": 5,
+                "following": 1
+            },
+            "perks": {
+                "verified": true,
+                "staff": true,
+                "translator": false,
+                "pro": true
+            },
+            "permalink": "https://memerator.me/profile/338784252382412800",
+            "joined": "2019-04-17T13:27:02.000Z",
+            "joined_epoch_seconds": 1555507622
+        },
+        "rating": 5,
+        "timestamp": "2020-02-28T14:39:58.000Z"
+    }
+]
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
