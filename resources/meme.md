@@ -278,14 +278,14 @@ Get Meme Comments
 {% endapi-method-summary %}
 
 {% api-method-description %}
-This method returns an array of comments for a specifiied meme and their author.
+This method returns an array of comments for a specified meme and their author.
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="" type="string" required=false %}
-
+{% api-method-parameter name=":id" type="string" required=true %}
+meme id
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 {% endapi-method-request %}
@@ -293,11 +293,71 @@ This method returns an array of comments for a specifiied meme and their author.
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-
+An array of comments. In each comment object there is ID, author \(User object\), the content, the associated Meme, the timestamp, and the creation in epoch seconds.
 {% endapi-method-response-example-description %}
 
-```
-
+```javascript
+[
+    {
+        "id": 5,
+        "author": {
+            "username": "Chew",
+            "bio": "#1 most depressed Memerator user. pronouns: she/her 🏳️‍⚧️",
+            "id": 476488167042580481,
+            "stats": {
+                "memes": 382,
+                "followers": 28,
+                "following": 24
+            },
+            "perks": {
+                "verified": true,
+                "staff": true,
+                "translator": false,
+                "pro": true
+            },
+            "permalink": "https://memerator.me/profile/476488167042580481",
+            "joined": "2018-10-11T15:37:03.000Z",
+            "joined_epoch_seconds": 1539272223
+        },
+        "content": "aaaaaaaaaaaaaaaaaaaaaa",
+        "meme": {
+            "disabled": false,
+            "memeid": "aaaaaaa",
+            "caption": "***__AAAAAAAA__***",
+            "author": {
+                "username": "Chew",
+                "bio": "#1 most depressed Memerator user. pronouns: she/her 🏳️‍⚧️",
+                "id": 476488167042580481,
+                "stats": {
+                    "memes": 382,
+                    "followers": 28,
+                    "following": 24
+                },
+                "perks": {
+                    "verified": true,
+                    "staff": true,
+                    "translator": false,
+                    "pro": true
+                },
+                "permalink": "https://memerator.me/profile/476488167042580481",
+                "joined": "2018-10-11T15:37:03.000Z",
+                "joined_epoch_seconds": 1539272223
+            },
+            "rating": {
+                "average": 4.0,
+                "total": 5
+            },
+            "age": 1,
+            "url": "https://cdn.memerator.me/K7bLRy9.jpg",
+            "permalink": "https://memerator.me/meme/aaaaaaa",
+            "timestamp": "2019-02-15T13:29:01.000Z",
+            "timestamp_epoch_seconds": 1550237341,
+            "time_ago": "over 1 year"
+        },
+        "timestamp": "2020-02-02T15:11:31.000Z",
+        "timestamp_epoch_seconds": 1580656291
+    }
+]
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
