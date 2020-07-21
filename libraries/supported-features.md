@@ -105,13 +105,18 @@ description: What the libraries support
       <td style="text-align:left">Yes</td>
     </tr>
     <tr>
+      <td style="text-align:left">Get Profile&apos;s Memes</td>
+      <td style="text-align:left">Yes</td>
+      <td style="text-align:left">No</td>
+    </tr>
+    <tr>
       <td style="text-align:left">Update Profile</td>
       <td style="text-align:left">Yes</td>
       <td style="text-align:left">Yes</td>
     </tr>
     <tr>
       <td style="text-align:left">View Reports</td>
-      <td style="text-align:left">No</td>
+      <td style="text-align:left">Yes</td>
       <td style="text-align:left">Yes</td>
     </tr>
     <tr>
@@ -131,4 +136,6 @@ description: What the libraries support
     </tr>
   </tbody>
 </table>
+
+
 
