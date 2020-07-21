@@ -6,5 +6,5 @@
   * [User/Profile](resources/user.md)
   * [Meme](resources/meme.md)
 * [Libraries](libraries/README.md)
-  * [Supported Features](libraries/supported-features.md)
+  * [Feature Table](libraries/feature-table.md)
 

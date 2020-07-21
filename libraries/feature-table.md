@@ -2,7 +2,7 @@
 description: What the libraries support
 ---
 
-# Supported Features
+# Feature Table
 
 <table>
   <thead>
