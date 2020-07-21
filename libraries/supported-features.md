@@ -47,7 +47,7 @@ description: What the libraries support
     <tr>
       <td style="text-align:left">Rate Meme</td>
       <td style="text-align:left">Yes</td>
-      <td style="text-align:left">No</td>
+      <td style="text-align:left">Yes</td>
     </tr>
     <tr>
       <td style="text-align:left">Get Meme Ratings</td>
