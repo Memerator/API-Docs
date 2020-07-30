@@ -4,6 +4,10 @@ description: What the libraries support
 
 # Feature Table
 
+A \* next to a "Yes" means the feature is only available in an unreleased build, either in beta or on GitHub only depending on the language.
+
+Anything extra or clarification is added in parenthesis.
+
 <table>
   <thead>
     <tr>
@@ -27,7 +31,7 @@ description: What the libraries support
     <tr>
       <td style="text-align:left">Get Meme Comments</td>
       <td style="text-align:left">Yes</td>
-      <td style="text-align:left">Yes</td>
+      <td style="text-align:left">Yes*</td>
     </tr>
     <tr>
       <td style="text-align:left">Set Meme Caption</td>
@@ -62,12 +66,12 @@ description: What the libraries support
     <tr>
       <td style="text-align:left">Get Random Meme</td>
       <td style="text-align:left">Yes</td>
-      <td style="text-align:left">No</td>
+      <td style="text-align:left">Yes</td>
     </tr>
     <tr>
       <td style="text-align:left">Get Recent Memes</td>
       <td style="text-align:left">Yes</td>
-      <td style="text-align:left">Yes (amount param only)</td>
+      <td style="text-align:left">Yes*</td>
     </tr>
     <tr>
       <td style="text-align:left">Get Top Memes</td>
@@ -107,7 +111,7 @@ description: What the libraries support
     <tr>
       <td style="text-align:left">Get Profile&apos;s Memes</td>
       <td style="text-align:left">Yes</td>
-      <td style="text-align:left">No</td>
+      <td style="text-align:left">Yes* (self only)</td>
     </tr>
     <tr>
       <td style="text-align:left">Update Profile</td>
