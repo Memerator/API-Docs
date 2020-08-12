@@ -37,7 +37,7 @@ Anything extra or clarification is added in parenthesis.
       <td style="text-align:left">Get Meme Comments</td>
       <td style="text-align:left">Yes</td>
       <td style="text-align:left">Yes*</td>
-      <td style="text-align:left">No</td>
+      <td style="text-align:left">Yes*</td>
     </tr>
     <tr>
       <td style="text-align:left">Set Meme Caption</td>
@@ -49,13 +49,13 @@ Anything extra or clarification is added in parenthesis.
       <td style="text-align:left">Enable Meme</td>
       <td style="text-align:left">Yes</td>
       <td style="text-align:left">Yes</td>
-      <td style="text-align:left">No</td>
+      <td style="text-align:left">Yes*</td>
     </tr>
     <tr>
       <td style="text-align:left">Disable Meme</td>
       <td style="text-align:left">Yes</td>
       <td style="text-align:left">Yes</td>
-      <td style="text-align:left">No</td>
+      <td style="text-align:left">Yes*</td>
     </tr>
     <tr>
       <td style="text-align:left">Rate Meme</td>
@@ -79,13 +79,13 @@ Anything extra or clarification is added in parenthesis.
       <td style="text-align:left">Get Random Meme</td>
       <td style="text-align:left">Yes</td>
       <td style="text-align:left">Yes</td>
-      <td style="text-align:left">No</td>
+      <td style="text-align:left">Yes*</td>
     </tr>
     <tr>
       <td style="text-align:left">Get Recent Memes</td>
       <td style="text-align:left">Yes</td>
       <td style="text-align:left">Yes*</td>
-      <td style="text-align:left">No</td>
+      <td style="text-align:left">Yes*</td>
     </tr>
     <tr>
       <td style="text-align:left">Get Top Memes</td>
@@ -109,19 +109,19 @@ Anything extra or clarification is added in parenthesis.
       <td style="text-align:left">Get Notifications</td>
       <td style="text-align:left">Yes</td>
       <td style="text-align:left">Yes</td>
-      <td style="text-align:left">No</td>
+      <td style="text-align:left">Yes*</td>
     </tr>
     <tr>
       <td style="text-align:left">Get Notification Count</td>
       <td style="text-align:left">Yes</td>
       <td style="text-align:left">No</td>
-      <td style="text-align:left">No</td>
+      <td style="text-align:left">Yes*</td>
     </tr>
     <tr>
       <td style="text-align:left">Delete Notification</td>
       <td style="text-align:left">Yes</td>
       <td style="text-align:left">No</td>
-      <td style="text-align:left">No</td>
+      <td style="text-align:left">Yes*</td>
     </tr>
     <tr>
       <td style="text-align:left">Get Profiles</td>
@@ -139,13 +139,13 @@ Anything extra or clarification is added in parenthesis.
       <td style="text-align:left">Update Profile</td>
       <td style="text-align:left">Yes</td>
       <td style="text-align:left">Yes</td>
-      <td style="text-align:left">No</td>
+      <td style="text-align:left">Yes*</td>
     </tr>
     <tr>
       <td style="text-align:left">View Reports</td>
       <td style="text-align:left">Yes</td>
       <td style="text-align:left">Yes</td>
-      <td style="text-align:left">No</td>
+      <td style="text-align:left">Yes*</td>
     </tr>
     <tr>
       <td style="text-align:left">View Stats</td>
